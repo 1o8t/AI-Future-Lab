@@ -2,23 +2,23 @@
 
 **English | [العربية](ar/05-workflow-library.md)**
 
-AI Future Lab is documented through a connected library of visual workflows. Each workflow explains one major part of the system. Together, they describe how a human idea could move through artificial intelligence, urban planning, digital-twin creation, simulation, explanation, security, recovery, deployment, and controlled learning.
+AI Future Lab is documented through a connected library of visual workflows. Each workflow explains one major part of the proposed system. Together, they show how a human idea could move through AI understanding, urban planning, digital-twin creation, browser visualization, simulation, explainability, security, recovery, controlled learning, and production operations.
 
-The workflows are architecture designs. They are not evidence that every service shown in the boards is already implemented.
+> **Current status:** These images describe a proposed architecture and project concept. They do not prove that every service shown has already been implemented or tested.
 
 ---
 
 ## How to Read the Workflow Library
 
-Every board should be read using five questions:
+For every workflow, ask:
 
-1. **What information enters this workflow?**
-2. **What decisions or operations happen inside it?**
-3. **What output is produced?**
-4. **What can fail?**
-5. **Who must review or approve the output?**
+1. What information enters the workflow?
+2. What decisions or operations happen inside it?
+3. What output is produced?
+4. What can fail?
+5. Who reviews or approves the output?
 
-The workflows should also be read as connected stages. A later workflow must not silently invent information that an earlier workflow never approved.
+A later workflow must not silently invent information that an earlier workflow did not confirm. Human approval remains important whenever the system creates, changes, or recommends a major planning decision.
 
 ---
 
@@ -32,124 +32,140 @@ The workflows should also be read as connected stages. A later workflow must not
 - **Pink or purple:** AI engine, runtime, data intelligence, user experience, or operations
 - **Gray:** approved states, milestones, final outputs, or explanatory notes
 
-The color system is intended to make large diagrams easier to scan. Color alone should not be the only way meaning is communicated; labels must remain clear.
+Labels remain the source of meaning. Color is used only to make large workflows easier to scan.
 
 ---
 
 # Workflow 1 — Master Overview
 
-**Board:** [Open Master Overview](https://whimsical.com/6EdTLepAE6eS55uTTtqcny)
+![AI Future Lab Master Overview](../assets/workflows/01-master-overview.png)
+
+**Board:** [Open Master Overview in Whimsical](https://whimsical.com/6EdTLepAE6eS55uTTtqcny)
 
 ## Purpose
 
-Show the entire lifecycle of AI Future Lab on one board.
+Show the complete lifecycle of AI Future Lab on one connected board. This is the starting map for understanding the rest of the architecture.
 
-## Main flow
+## Main Flow
 
 ```text
 Human idea
-→ AI understanding
-→ validated city brief
-→ AI planning
-→ digital twin
-→ visualization
-→ simulation
+→ AI understanding and clarification
+→ approved city brief
+→ AI-assisted urban planning
+→ digital-twin data
+→ browser visualization
+→ scenario simulation
 → explainable results
-→ human review
-→ deployment and learning
+→ human review and approval
+→ controlled deployment and learning
 ```
 
-## Inputs
+## Main Inputs
 
 - Human city idea
-- Project files
-- Site information
-- User priorities
+- Text or voice request
+- Project files and site information
+- User priorities and constraints
+- Approved planning policies and data
 
-## Outputs
+## Main Outputs
 
-- Approved planning brief
-- Candidate plans
-- Digital city state
+- Approved city brief
+- Candidate urban plans
+- Versioned digital city state
 - Scenario results
-- Explanations and reports
-- Feedback and revisions
+- Explanations, warnings, and reports
+- Human feedback and revised versions
 
-## Questions answered by this workflow
+## Human Control
 
-- Where does the process begin and end?
-- Which parts are performed by AI?
-- Where does human approval occur?
-- How do simulation and explanation connect?
-- How does feedback return to the system?
+The system supports human decision-making. It does not independently approve a real city plan. Planners, engineers, reviewers, and authorized organizations remain responsible for final decisions.
 
-## Common misunderstanding
+## Common Misunderstanding
 
-The master overview is not one software function. It is a map connecting multiple proposed services.
+The Master Overview is not one software function. It is a map connecting multiple proposed services and decision points.
 
 ---
 
 # Workflow 2 — Human Input and AI Understanding
 
-**Board:** [Open Human Input & AI Understanding](https://whimsical.com/8F6utnKkwo8pFn6xxGbTgx)
+![Human Input and AI Understanding](../assets/workflows/02-human-input-ai-understanding.png)
+
+**Board:** [Open Human Input & AI Understanding in Whimsical](https://whimsical.com/8F6utnKkwo8pFn6xxGbTgx)
 
 ## Purpose
 
-Explain how the system receives a human request and converts it into a structured city brief.
+Convert an unstructured human idea into a clear, structured, and reviewable city brief.
 
-## Inputs
+## Possible Inputs
 
-- Text
-- Voice
+- Text request
+- Voice request
 - Uploaded documents
-- Map location
-- Previous project context
+- Map location or site boundary
+- Previous approved project context
+- Population, budget, sustainability, transport, and service priorities
 
-## Internal stages
+## Internal Process
 
-1. Detect language.
+1. Detect the language.
 2. Convert voice to text when required.
-3. Extract user intent.
-4. Identify entities and numeric values.
-5. Identify constraints and priorities.
-6. Detect missing information.
-7. Detect contradictions.
+3. Identify the user’s main goal.
+4. Extract places, quantities, dates, units, and requirements.
+5. Separate confirmed facts from assumptions.
+6. Identify missing information.
+7. Detect contradictions and impossible combinations.
 8. Ask focused clarification questions.
-9. Show extracted information to the user.
-10. Create an approved city brief.
+9. Show the extracted requirements to the user.
+10. Save an approved city-brief version.
 
 ## Outputs
 
 - Confirmed requirements
-- Assumptions
-- Open questions
+- Assumption list
+- Missing-information list
 - Conflict list
-- Approved brief version
+- Clarification questions
+- Approved city brief
 
-## Failure cases
+## Example
 
-- Incorrect transcription
-- Wrong population value
-- Missing units
-- Confusing an assumption with a confirmed fact
-- Asking repeated questions
-- Continuing without approval
+A user might say:
 
-## Approval gate
+```text
+Create a sustainable district for 30,000 residents with schools,
+healthcare, public transport, parks, and reduced car dependence.
+```
 
-The city brief must be reviewed before it becomes the source of truth for planning.
+The system should not immediately generate a city. It should first ask about the site, available land, budget range, housing mix, climate requirements, time horizon, and approval authority.
+
+## Failure Cases
+
+- Incorrect voice transcription
+- Wrong population or area value
+- Missing unit of measurement
+- Treating an assumption as a confirmed fact
+- Repeating the same clarification question
+- Moving forward without user approval
+
+## Approval Gate
+
+The city brief becomes the source of truth only after the user reviews and confirms it.
 
 ---
 
 # Workflow 3 — AI Core Architecture
 
-**Board:** [Open AI Core Architecture](https://whimsical.com/V9YjzMedP4ibnudKTGNvbo)
+![AI Core Architecture](../assets/workflows/03-ai-core-architecture.png)
+
+**Board:** [Open AI Core Architecture in Whimsical](https://whimsical.com/V9YjzMedP4ibnudKTGNvbo)
 
 ## Purpose
 
-Describe the central coordination layer that manages models, tools, memory, validation, safety, and decisions.
+Coordinate AI models, specialist tools, memory, evidence, validation, safety controls, and task decisions.
 
-## Main components
+## Main Components
 
 - Context builder
 - Conversation and project memory
@@ -161,15 +177,26 @@ Describe the central coordination layer that manages models, tools, memory, vali
 - Decision coordinator
 - Evidence collector
 - Error manager
-- Safety controls
+- Safety and permission controls
 
 ## Inputs
 
 - Approved city brief
-- Retrieved knowledge
-- Current project state
-- User permissions
-- Previous task results
+- Retrieved knowledge and policies
+- Current project version
+- User role and permissions
+- Previous approved task results
+
+## Process
+
+1. Build only the context needed for the task.
+2. Break the request into smaller specialist tasks.
+3. Select the correct model or tool for each task.
+4. Request structured output rather than uncontrolled free text.
+5. Validate schemas, values, evidence, and permissions.
+6. Repair safe errors within a limited retry policy.
+7. Escalate uncertain or high-impact decisions to a human.
+8. Store approved results with traceability.
 
 ## Outputs
 
@@ -177,133 +204,121 @@ Describe the central coordination layer that manages models, tools, memory, vali
 - Tool calls
 - Structured results
 - Evidence records
-- Error records
+- Error and retry records
 - Approved information for later layers
 
-## Key principle
+## Key Principle
 
-The AI core should coordinate specialist tools instead of pretending that a language model can perform every planning, GIS, or engineering task.
+A language model should not pretend to perform every GIS, engineering, legal, environmental, or simulation task. The AI core coordinates specialist services and clearly records their limitations.
 
-## Failure cases
+## Failure and Recovery
 
-- Invalid model output
-- Tool timeout
-- Conflicting results
-- Missing evidence
-- Unsafe action request
-- Excessive retry loop
-
-## Recovery
-
-- Limited retry
-- Safe fallback
-- Human escalation
-- Return to previous approved state
+Possible failures include invalid structured output, tool timeout, conflicting results, missing evidence, unauthorized requests, and excessive retry loops. Recovery may include limited retry, safe fallback, human escalation, or return to the last approved state.
 
 ---
 
 # Workflow 4 — Urban Planning and Digital Twin
 
-**Board:** [Open Urban Planning & Digital Twin](https://whimsical.com/Bp31XsuU3761Eo6aJJJz6Z)
+![Urban Planning and Digital Twin](../assets/workflows/04-urban-planning-digital-twin.png)
+
+**Board:** [Open Urban Planning & Digital Twin in Whimsical](https://whimsical.com/Bp31XsuU3761Eo6aJJJz6Z)
 
 ## Purpose
 
-Show how planning decisions are generated, validated, and stored as a versioned city model.
+Generate planning alternatives, validate them against the approved brief, and store an approved option as a structured and versioned digital city model.
 
-## Planning areas
+## Planning Areas
 
-- Land use
-- Zoning
-- Density
-- Housing
-- Districts
-- Roads
-- Public transport
+- Land use and zoning
+- Density and housing
+- Districts and neighborhoods
+- Roads and public transport
 - Walking and cycling
-- Schools
-- Healthcare
+- Schools and healthcare
 - Parks and public space
-- Energy
-- Water
-- Waste
+- Energy, water, and waste
 - Environmental systems
-- Resilience
+- Climate resilience
+- Development phases
 
 ## Inputs
 
 - Approved city brief
 - Site and GIS data
-- Policies and standards
+- Policies, standards, and restrictions
 - User priorities
 - Planning assumptions
+- Existing infrastructure information
 
-## Process
+## Planning Process
 
-1. Generate candidate strategies.
-2. Check each candidate against requirements.
-3. Calculate basic indicators.
-4. Identify conflicts and service gaps.
-5. Compare candidates.
-6. Request human review.
-7. Convert the approved candidate into city objects.
-8. Save a new digital-twin version.
+1. Generate multiple candidate strategies.
+2. Check every candidate against the city brief.
+3. Calculate basic planning indicators.
+4. Identify conflicts, service gaps, and unsupported assumptions.
+5. Compare alternatives and trade-offs.
+6. Request professional and human review.
+7. Convert the approved option into city objects and relationships.
+8. Save a new digital-twin version without deleting earlier approved versions.
 
 ## Outputs
 
 - Candidate plans
 - Validation results
+- Comparison table
 - Approved plan version
 - City objects and spatial relationships
-- Traceability links
+- Traceability links between requirements and decisions
 
-## Important distinction
+## Digital-Twin Meaning
 
-The digital twin is not only a 3D model. It is a structured, versioned data representation of the city and its relationships.
+The digital twin is not only a 3D model. It is a structured, versioned representation of city objects, locations, properties, relationships, assumptions, decisions, and scenario states.
 
 ---
 
 # Workflow 5 — Web City Generation and Simulation
 
-**Board:** [Open City Generation & Simulation](https://whimsical.com/48bkuxGhVnjNmJqQV4tcye)
+![Web City Generation and Simulation](../assets/workflows/05-city-generation-simulation.png)
+
+**Board:** [Open City Generation & Simulation in Whimsical](https://whimsical.com/48bkuxGhVnjNmJqQV4tcye)
 
 ## Purpose
 
-Explain how approved city data could be displayed and tested.
+Display approved city data in an understandable way and test scenarios before real-world implementation.
 
-## Main product direction
+## Preferred Product Direction
 
-A browser-based map is the preferred main direction because it can work on ordinary computers and can display geospatial planning layers clearly.
+The main proposed direction is a browser-based planning map because it is easier to access, can display geospatial layers clearly, and does not require a powerful game engine for the first prototype.
 
-## Possible visual layers
+## Possible Map Layers
 
 - Site boundary
-- Land use
+- Land use and zoning
 - Districts
-- Roads
-- Public transport
+- Roads and public transport
 - Schools and healthcare
-- Parks
+- Parks and public spaces
 - Utilities
 - Environmental restrictions
 - Development phases
 
-## Possible simulation categories
+## Possible Simulations
 
 - Population growth
 - Transport demand
-- Service accessibility
+- Access to services
 - School and healthcare capacity
 - Energy and water demand
 - Climate and heat conditions
 - Infrastructure incidents
-- Policy changes
+- Policy or development changes
 
 ## Inputs
 
-- Digital-twin version
+- Selected digital-twin version
 - Scenario definition
 - Simulation assumptions
-- Selected model
+- Selected model and data sources
 
 ## Outputs
 
@@ -312,34 +327,36 @@ A browser-based map is the preferred main direction because it can work on ordin
 - Changed conditions
 - Warnings
 - Scenario comparison
-- Model limitations
+- Model limitations and uncertainty
 
-## Important rule
+## Important Rule
 
-A visualization must not be presented as proof that a plan is correct. The map or 3D representation must remain connected to data, assumptions, and validation.
+A visualization is not proof that a plan is correct. Every map, model, or simulation must remain connected to its source data, assumptions, validation status, and limitations.
 
-## Optional engines
+## Optional Engines
 
-Godot, Unity, and Unreal Engine are future optional visualization paths. They are not the current main product and are not required for the first working prototype.
+Godot, Unity, and Unreal Engine remain optional future visualization paths. They are not required for the current documentation phase or the first browser-focused prototype.
 
 ---
 
 # Workflow 6 — Results and Explainability
 
-**Board:** [Open Results & Explainability](https://whimsical.com/5ZnfDhpTdQKJFdnQB3xgiH)
+![Results and Explainability](../assets/workflows/06-results-explainability.png)
+
+**Board:** [Open Results & Explainability in Whimsical](https://whimsical.com/5ZnfDhpTdQKJFdnQB3xgiH)
 
 ## Purpose
 
-Transform technical planning and simulation outputs into information that humans can review and understand.
+Transform technical planning and simulation output into information that decision-makers, professionals, and the public can understand and review.
 
 ## Inputs
 
-- Candidate comparisons
+- Candidate-plan comparisons
 - Simulation results
 - Validation reports
 - Evidence and sources
 - Risk records
-- Assumptions
+- Assumptions and uncertainty
 
 ## Outputs
 
@@ -352,40 +369,45 @@ Transform technical planning and simulation outputs into information that humans
 - Recommended actions
 - Alternative options
 
-## Required explanation questions
+## Every Recommendation Should Explain
 
-Every major recommendation should answer:
-
-1. What is recommended?
-2. Why?
+1. What is being recommended?
+2. Why is it recommended?
 3. Which requirement does it support?
-4. Which evidence was used?
+4. What evidence was used?
 5. Which alternatives were considered?
 6. What trade-offs exist?
 7. What uncertainty remains?
 8. Who must approve the decision?
 
-## Failure cases
+## Failure Cases
 
 - Recommendation without evidence
 - Hidden assumption
 - Unclear uncertainty
 - Technical language without explanation
-- Reporting only the preferred option and hiding alternatives
+- Showing only the preferred option while hiding alternatives
+- Presenting estimates as guaranteed results
+
+## Human Review
+
+High-impact planning recommendations must be reviewable, challengeable, and reversible before approval.
 
 ---
 
 # Workflow 7 — Errors and Recovery
 
-**Board:** [Open Errors & Recovery](https://whimsical.com/L4WgEGjtVvKZ2kSSLAcfVy)
+![Errors and Recovery](../assets/workflows/07-errors-recovery.png)
+
+**Board:** [Open Errors & Recovery in Whimsical](https://whimsical.com/L4WgEGjtVvKZ2kSSLAcfVy)
 
 ## Purpose
 
-Protect the approved project state when a model, service, dataset, or deployment fails.
+Protect the last approved project state when a model, tool, dataset, database, integration, or deployment fails.
 
-## Error categories
+## Error Categories
 
-- User input error
+- User-input error
 - Data-format error
 - Missing data
 - Model-output error
@@ -395,44 +417,47 @@ Protect the approved project state when a model, service, dataset, or deployment
 - Security incident
 - Deployment failure
 
-## Recovery flow
+## Recovery Flow
 
 ```text
-Detect
-→ classify
-→ protect approved state
-→ collect evidence
+Detect the problem
+→ classify severity
+→ protect the approved state
+→ collect evidence and logs
 → retry only when safe
-→ repair or use approved fallback
-→ human escalation when required
+→ repair or use an approved fallback
+→ escalate to a human when required
 → validate recovery
-→ record incident
+→ record the incident
 ```
 
 ## Outputs
 
 - Error record
-- Severity
-- Affected task
+- Severity level
+- Affected task and version
 - Recovery action
 - Final status
 - Rollback record
+- Human-review requirement
 
-## Critical rule
+## Critical Rule
 
-The system must not continue silently after a serious failure.
+The system must not continue silently after a serious failure. Uncertain output must not replace an approved project version.
 
 ---
 
 # Workflow 8 — Security, APIs and Monitoring
 
-**Board:** [Open Security, APIs & Monitoring](https://whimsical.com/3bt9QRsL4FvkR8RL1BvRhV)
+![Security APIs and Monitoring](../assets/workflows/08-security-apis-monitoring.png)
+
+**Board:** [Open Security, APIs & Monitoring in Whimsical](https://whimsical.com/3bt9QRsL4FvkR8RL1BvRhV)
 
 ## Purpose
 
 Protect identity, permissions, project data, external integrations, system reliability, and audit history.
 
-## Main areas
+## Main Areas
 
 - Authentication
 - Authorization
@@ -447,23 +472,7 @@ Protect identity, permissions, project data, external integrations, system relia
 - Threat detection
 - Backup verification
 
-## Inputs
-
-- Login events
-- API requests
-- File uploads
-- Service calls
-- System logs
-
-## Outputs
-
-- Access decision
-- Security event
-- Audit record
-- Alert
-- Incident response action
-
-## Example roles
+## Example Roles
 
 - Viewer
 - Editor
@@ -473,28 +482,50 @@ Protect identity, permissions, project data, external integrations, system relia
 - Approver
 - Administrator
 
-## Privacy principle
+Each role should receive only the permissions required for its work.
 
-Only the minimum required information should be collected, stored, and shared.
+## Inputs
+
+- Login events
+- API requests
+- File uploads
+- Service calls
+- System logs
+- Permission and configuration changes
+
+## Outputs
+
+- Access decision
+- Security event
+- Audit record
+- Alert
+- Incident-response action
+- Backup or recovery verification
+
+## Privacy Principle
+
+Collect, store, and share only the minimum information required. Private project data must not be reused for learning or public demonstrations without permission.
 
 ---
 
 # Workflow 9 — Learning and Autonomous Optimization
 
-**Board:** [Open Learning & Autonomous Optimization](https://whimsical.com/SJJ5wWcQCLCSXS4ccNgC1a)
+![Learning and Autonomous Optimization](../assets/workflows/09-learning-optimization.png)
+
+**Board:** [Open Learning & Autonomous Optimization in Whimsical](https://whimsical.com/SJJ5wWcQCLCSXS4ccNgC1a)
 
 ## Purpose
 
-Explain how approved feedback may improve the system without allowing uncontrolled self-modification.
+Use approved feedback to improve the system without allowing uncontrolled self-modification.
 
-## Process
+## Controlled Improvement Process
 
 ```text
 Approved feedback
 → analysis
-→ create experiment
+→ create a limited experiment
 → sandbox testing
-→ compare with approved version
+→ compare with the approved version
 → safety and quality review
 → human approval
 → limited release
@@ -502,16 +533,16 @@ Approved feedback
 → full approval or rollback
 ```
 
-## Possible learning inputs
+## Possible Learning Inputs
 
 - Professional corrections
 - Clarification failures
 - Repeated missing fields
-- Model evaluation results
-- Tool reliability
-- User explanation preferences
+- Model-evaluation results
+- Tool reliability records
+- Approved user-experience feedback
 
-## Inputs that require special caution
+## Inputs Requiring Special Caution
 
 - Private project data
 - Confidential government or company information
@@ -519,19 +550,21 @@ Approved feedback
 - Unverified user claims
 - Personal information
 
-## Important rule
+## Important Rule
 
-The system should not automatically learn from every user action.
+The system should not automatically learn from every user action. Only approved, reviewed, and legally permitted information should enter an improvement dataset.
 
 ---
 
 # Workflow 10 — Deployment and Production Operations
 
-**Board:** [Open Deployment & Production Operations](https://whimsical.com/3U7GqN6YdcpV3PRddLezDg)
+![Deployment and Production Operations](../assets/workflows/10-deployment-operations.png)
+
+**Board:** [Open Deployment & Production Operations in Whimsical](https://whimsical.com/3U7GqN6YdcpV3PRddLezDg)
 
 ## Purpose
 
-Describe how a tested software version could move safely from development to production.
+Describe how a tested software version could move safely from development to real production use.
 
 ## Environments
 
@@ -541,44 +574,46 @@ Describe how a tested software version could move safely from development to pro
 - Limited pilot
 - Production
 
-## Release process
+## Release Process
 
-1. Create release package.
-2. Run automated tests.
-3. Run security checks.
+1. Create a release package.
+2. Run automated and manual tests.
+3. Run security and permission checks.
 4. Deploy to staging.
-5. Validate with test projects.
+5. Validate with safe test projects.
 6. Obtain approval.
 7. Release gradually.
 8. Monitor errors, cost, latency, and quality.
 9. Roll back when required.
 
-## Operational areas
+## Operational Areas
 
-- Monitoring
-- Logging
-- Backups
-- Recovery
+- Monitoring and logging
+- Backups and restoration
 - Capacity scaling
 - Service-level objectives
 - Maintenance windows
 - Incident response
+- Model and prompt versioning
+- Cost and performance control
 
-## Key principle
+## Key Principle
 
-A new AI model or prompt should not move directly from experimentation to production.
+A new AI model, prompt, dataset, or tool must not move directly from an experiment into production without testing, review, version control, and rollback capability.
 
 ---
 
 # Workflow 11 — Final Integrated Architecture
 
-**Board:** [Open Final Integrated Architecture](https://whimsical.com/Us2JN5AFmp69T3iVanPp4z)
+![Final Integrated Architecture](../assets/workflows/11-final-integrated-architecture.png)
+
+**Board:** [Open Final Integrated Architecture in Whimsical](https://whimsical.com/Us2JN5AFmp69T3iVanPp4z)
 
 ## Purpose
 
-Show the complete connected architecture and shared data stores.
+Show how the complete proposed architecture connects across shared data stores, approval gates, security controls, and operational services.
 
-## Main layers connected
+## Connected Layers
 
 - Human interaction
 - AI understanding
@@ -586,15 +621,15 @@ Show the complete connected architecture and shared data stores.
 - Planning intelligence
 - Knowledge retrieval
 - Digital twin
-- Visualization
+- Browser visualization
 - Simulation
 - Explainability
 - Security
-- Recovery
-- Learning
-- Deployment
+- Error recovery
+- Controlled learning
+- Deployment and operations
 
-## Shared stores
+## Shared Stores
 
 - Conversation and project memory
 - City knowledge base
@@ -606,26 +641,30 @@ Show the complete connected architecture and shared data stores.
 - Audit and security logs
 - Learning and evaluation data
 
-## Why this board matters
+## Why This Workflow Matters
 
-It shows that AI Future Lab is not one model or one screen. It is a proposed ecosystem of connected services with human approval and shared governance.
+It demonstrates that AI Future Lab is not one chatbot, one AI model, one map, or one 3D scene. It is a proposed ecosystem of connected services where information must remain structured, validated, traceable, secure, and subject to human approval.
+
+## Final Principle
+
+AI Future Lab does not build the city instead of people. It helps people understand options, test scenarios, explain trade-offs, and make better-informed decisions before real construction.
 
 ---
 
-# Workflows 12–14 — AI Model Operations
+# Additional AI Workflows
 
-Detailed document: [AI Model Workflows](AI_MODEL_WORKFLOWS.md)
+The AI-specific workflows are explained in:
 
-These workflows expand the original boards with:
+[AI Model Workflows](AI_MODEL_WORKFLOWS.md)
 
-- Prompt and model orchestration
+They cover:
+
+- AI model and prompt orchestration
 - Knowledge retrieval and RAG
-- AI evaluation
-- Guardrails
+- AI evaluation and grounding
+- Guardrails and safety checks
 - Model monitoring
-- Controlled model release
-
-They explain how the AI itself would be built, grounded, checked, and monitored.
+- Controlled model release and rollback
 
 ---
 
@@ -633,53 +672,23 @@ They explain how the AI itself would be built, grounded, checked, and monitored.
 
 ```text
 Workflow 2 creates the approved city brief.
-Workflow 3 coordinates the tasks.
+Workflow 3 coordinates models, tools, and validation.
 Workflow 4 creates planning candidates and digital-twin data.
 Workflow 5 visualizes and tests the city.
 Workflow 6 explains the results.
-Workflow 7 protects the system during failure.
-Workflow 8 protects all data and services.
-Workflow 9 improves approved behavior.
-Workflow 10 releases software safely.
-Workflow 11 connects everything.
-Workflows 12–14 govern the AI models and evidence.
+Workflow 7 protects approved work during failure.
+Workflow 8 protects identities, data, APIs, and services.
+Workflow 9 improves approved behavior under control.
+Workflow 10 releases tested software safely.
+Workflow 11 connects the complete architecture.
+Additional AI workflows govern models, evidence, and evaluation.
 ```
 
 ---
 
-## Recommended Images for GitHub
+## Current Project Status
 
-Export the workflows as high-quality PNG files and store them under:
-
-```text
-assets/workflows/
-```
-
-Recommended names:
-
-```text
-01-master-overview.png
-02-human-input-ai-understanding.png
-03-ai-core-architecture.png
-04-urban-planning-digital-twin.png
-05-city-generation-simulation.png
-06-results-explainability.png
-07-errors-recovery.png
-08-security-apis-monitoring.png
-09-learning-optimization.png
-10-deployment-operations.png
-11-final-integrated-architecture.png
-```
-
-Do not upload screenshots that show private browser tabs, emails, notifications, account details, private links, or personal information.
-
----
-
-## Current Status
-
-The visual workflows and their public links exist. The services shown inside the workflows are proposed architecture components and should be implemented gradually.
-
-The first implementation should focus on the early part of the library:
+The 11 workflow images and their Whimsical boards are available. The architecture shown is a documented concept and future system design. Development should happen gradually, beginning with:
 
 ```text
 Human input
@@ -688,4 +697,4 @@ Human input
 → approved city brief
 ```
 
-Later phases can add maps, planning analysis, digital twins, simulations, and optional advanced visualization.
+Later phases may add geospatial maps, planning analysis, digital twins, simulations, dashboards, and optional advanced visualization.
