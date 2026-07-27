@@ -1,0 +1,8 @@
+blank_issues_enabled: false
+contact_links:
+  - name: Read the Permission Policy | اقرأ سياسة الإذن
+    url: https://github.com/1o8t/AI-Future-Lab/blob/main/PERMISSION.md
+    about: Review the permission and collaboration rules before submitting a request. | راجع قواعد الإذن والتعاون قبل إرسال الطلب.
+  - name: Read the Project Documentation | اقرأ توثيق المشروع
+    url: https://github.com/1o8t/AI-Future-Lab/tree/main/docs
+    about: Understand the project stage, architecture, and limitations before contacting the creator. | افهم مرحلة المشروع وهيكله وحدوده قبل التواصل.
