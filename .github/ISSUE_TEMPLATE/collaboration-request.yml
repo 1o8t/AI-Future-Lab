@@ -1,0 +1,137 @@
+name: Collaboration Request | طلب تعاون
+description: Propose a professional, academic, technical, educational, or organizational collaboration. | اقتراح تعاون مهني أو أكاديمي أو تقني أو تعليمي.
+title: "[Collaboration Request] "
+body:
+  - type: markdown
+    attributes:
+      value: |
+        AI Future Lab welcomes serious and respectful collaboration discussions. The project is currently a concept, system architecture, documentation library, and future product vision—not a completed government or commercial platform.
+
+        يرحب AI Future Lab بطلبات التعاون الجادة والمحترمة. المشروع حاليًا فكرة وهندسة نظام وتوثيق ورؤية منتج مستقبلي، وليس منصة حكومية أو تجارية مكتملة.
+
+        Do not include confidential data or private personal information in this public form.
+
+        لا تضع بيانات سرية أو معلومات شخصية خاصة في النموذج العام.
+
+  - type: input
+    id: name
+    attributes:
+      label: Name or organization | الاسم أو الجهة
+      placeholder: Professional name or organization
+    validations:
+      required: true
+
+  - type: input
+    id: role
+    attributes:
+      label: Role and area of expertise | الدور ومجال الخبرة
+      placeholder: Urban planner, AI researcher, university, developer, etc.
+    validations:
+      required: true
+
+  - type: input
+    id: profile
+    attributes:
+      label: Verifiable public profile | ملف عام يمكن التحقق منه
+      description: GitHub, official organization website, university page, or professional profile. | GitHub أو موقع رسمي أو صفحة جامعة أو ملف مهني.
+    validations:
+      required: true
+
+  - type: dropdown
+    id: collaboration_type
+    attributes:
+      label: Collaboration type | نوع التعاون
+      options:
+        - Professional feedback | مراجعة مهنية
+        - Academic or research | أكاديمي أو بحثي
+        - Educational | تعليمي
+        - Technical development | تطوير تقني
+        - Urban planning or GIS | تخطيط حضري أو GIS
+        - Responsible AI or security | ذكاء اصطناعي مسؤول أو أمان
+        - Government innovation discussion | نقاش ابتكار حكومي
+        - Commercial discussion | نقاش تجاري
+        - Media or event | إعلام أو فعالية
+        - Other | غير ذلك
+    validations:
+      required: true
+
+  - type: textarea
+    id: proposal
+    attributes:
+      label: Collaboration proposal | اقتراح التعاون
+      description: Explain the problem, proposed work, and why the collaboration may be valuable. | اشرح المشكلة والعمل المقترح وقيمة التعاون.
+    validations:
+      required: true
+
+  - type: textarea
+    id: contributor_role
+    attributes:
+      label: What will you or your organization contribute? | ماذا ستقدم أنت أو جهتك؟
+      placeholder: Expertise, review, development, research, mentoring, data under permission, etc.
+    validations:
+      required: true
+
+  - type: textarea
+    id: creator_role
+    attributes:
+      label: What do you expect from the AI Future Lab creator? | ماذا تتوقع من صاحب AI Future Lab؟
+    validations:
+      required: true
+
+  - type: input
+    id: timeline
+    attributes:
+      label: Proposed timeline | المدة المقترحة
+      placeholder: Dates, duration, or milestone
+    validations:
+      required: true
+
+  - type: dropdown
+    id: confidentiality
+    attributes:
+      label: Public or confidential discussion? | هل النقاش عام أم سري؟
+      options:
+        - Public | عام
+        - May require a private discussion later | قد يحتاج نقاشًا خاصًا لاحقًا
+        - Confidential agreement may be required | قد يحتاج اتفاق سرية
+    validations:
+      required: true
+
+  - type: dropdown
+    id: commercial
+    attributes:
+      label: Is funding, payment, investment, ownership, or commercial use involved? | هل يوجد تمويل أو دفع أو استثمار أو ملكية أو استخدام تجاري؟
+      options:
+        - No | لا
+        - Yes | نعم
+        - Possibly, to be discussed | محتمل ويحتاج نقاشًا
+    validations:
+      required: true
+
+  - type: textarea
+    id: ownership
+    attributes:
+      label: Ownership and attribution expectations | توقعات الملكية وذكر المصدر
+      description: Explain expected ownership of outputs and how the original project will be credited. | اشرح ملكية المخرجات وطريقة ذكر المشروع الأصلي.
+    validations:
+      required: true
+
+  - type: textarea
+    id: data
+    attributes:
+      label: Data or system access required | البيانات أو الوصول المطلوب
+      description: Do not attach confidential data. State only the category and why it may be needed. | لا ترفق بيانات سرية، اذكر النوع والسبب فقط.
+
+  - type: checkboxes
+    id: confirmation
+    attributes:
+      label: Confirmation | التأكيد
+      options:
+        - label: I understand that no partnership exists until both sides provide clear written approval. | أفهم أنه لا توجد شراكة حتى يوافق الطرفان كتابةً.
+          required: true
+        - label: I will not announce endorsement by the UAE Government, a municipality, university, company, or authority without official written evidence. | لن أدعي اعتماد جهة حكومية أو بلدية أو جامعة أو شركة بلا دليل رسمي.
+          required: true
+        - label: I have not included confidential or private personal information. | لم أضع معلومات سرية أو شخصية خاصة.
+          required: true
+        - label: I have read PERMISSION.md, CONTRIBUTING.md, and SECURITY.md. | قرأت PERMISSION.md وCONTRIBUTING.md وSECURITY.md.
+          required: true
