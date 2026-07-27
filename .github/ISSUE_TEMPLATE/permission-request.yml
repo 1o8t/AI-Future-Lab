@@ -1,0 +1,131 @@
+name: Permission Request | طلب إذن
+description: Request written permission to reuse, publish, present, modify, or commercially discuss project material. | طلب إذن لاستخدام أو نشر أو تعديل مواد المشروع.
+title: "[Permission Request] "
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thank you for respecting the project creator's work. Submitting this form does not grant permission. Written approval is required.
+
+        شكرًا لاحترام عمل صاحب المشروع. إرسال النموذج لا يعني الحصول على الإذن، ويجب انتظار موافقة مكتوبة.
+
+        Do not include confidential information, passwords, identification documents, private phone numbers, or sensitive attachments.
+
+        لا تضع معلومات سرية أو كلمات مرور أو وثائق هوية أو أرقام هاتف خاصة أو مرفقات حساسة.
+
+  - type: input
+    id: requester
+    attributes:
+      label: Name or organization | الاسم أو الجهة
+      description: Use a professional public identity. | استخدم هوية مهنية عامة.
+      placeholder: Name or organization
+    validations:
+      required: true
+
+  - type: input
+    id: profile
+    attributes:
+      label: Public professional profile | ملف مهني عام
+      description: GitHub profile, official organization page, or another verifiable public profile. | حساب GitHub أو صفحة رسمية يمكن التحقق منها.
+      placeholder: Public profile URL or username
+    validations:
+      required: true
+
+  - type: dropdown
+    id: use_type
+    attributes:
+      label: Type of use | نوع الاستخدام
+      options:
+        - Educational | تعليمي
+        - Academic or research | أكاديمي أو بحثي
+        - Nonprofit | غير ربحي
+        - Government discussion | نقاش حكومي
+        - Commercial | تجاري
+        - Media, article, video, or event | إعلام أو مقال أو فيديو أو فعالية
+        - Other | غير ذلك
+    validations:
+      required: true
+
+  - type: textarea
+    id: material
+    attributes:
+      label: Exact material requested | المادة المطلوبة بالتحديد
+      description: List files, sections, diagrams, workflows, or code. | اذكر الملفات أو الأقسام أو المخططات أو الأكواد.
+      placeholder: "Example: docs/04-system-architecture.md and Workflow 3"
+    validations:
+      required: true
+
+  - type: textarea
+    id: purpose
+    attributes:
+      label: Purpose and planned use | الغرض وطريقة الاستخدام
+      description: Explain what you plan to create, publish, demonstrate, or build. | اشرح ما الذي ستنشئه أو تنشره أو تعرضه.
+    validations:
+      required: true
+
+  - type: textarea
+    id: audience
+    attributes:
+      label: Audience and publication location | الجمهور ومكان النشر
+      description: Explain who will see the material and where. | اشرح من سيشاهد المحتوى وأين.
+    validations:
+      required: true
+
+  - type: dropdown
+    id: modification
+    attributes:
+      label: Will the material be modified? | هل سيتم تعديل المادة؟
+      options:
+        - No | لا
+        - Yes, translated only | نعم، ترجمة فقط
+        - Yes, visual or editorial changes | نعم، تعديلات بصرية أو تحريرية
+        - Yes, technical or conceptual changes | نعم، تعديلات تقنية أو في الفكرة
+    validations:
+      required: true
+
+  - type: textarea
+    id: attribution
+    attributes:
+      label: Proposed attribution | طريقة ذكر المصدر المقترحة
+      placeholder: Explain how AI Future Lab and its creator will be credited.
+    validations:
+      required: true
+
+  - type: dropdown
+    id: money
+    attributes:
+      label: Is money, funding, sales, investment, or paid access involved? | هل يوجد تمويل أو بيع أو استثمار أو وصول مدفوع؟
+      options:
+        - No | لا
+        - Yes | نعم
+        - Not decided | غير محدد
+    validations:
+      required: true
+
+  - type: textarea
+    id: organizations
+    attributes:
+      label: Other people or organizations involved | الأشخاص أو الجهات الأخرى المشاركة
+      description: Do not include private personal information. | لا تضع معلومات شخصية خاصة.
+
+  - type: input
+    id: duration
+    attributes:
+      label: Requested permission period | مدة الإذن المطلوبة
+      placeholder: One event, one publication, six months, ongoing, etc.
+    validations:
+      required: true
+
+  - type: checkboxes
+    id: confirmation
+    attributes:
+      label: Confirmation | التأكيد
+      options:
+        - label: I understand that submitting this request does not grant permission. | أفهم أن إرسال الطلب لا يمنحني الإذن.
+          required: true
+        - label: I will wait for clear written approval before using the requested material. | سأنتظر موافقة مكتوبة قبل استخدام المادة.
+          required: true
+        - label: I have not included confidential or private information. | لم أضع معلومات سرية أو خاصة.
+          required: true
+        - label: I have read PERMISSION.md and LICENSE.md. | قرأت PERMISSION.md وLICENSE.md.
+          required: true
