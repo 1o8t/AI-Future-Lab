@@ -1,385 +1,255 @@
-# 🏙️ AI Future Lab
+# 🏙️ AI Future Lab | مختبر المستقبل للذكاء الاصطناعي
 
-[![AI Powered](https://img.shields.io/badge/AI-Powered-7B61FF.svg?style=flat&logo=openai&logoColor=white)](#-how-the-ai-works)
-[![Smart Cities](https://img.shields.io/badge/Smart%20Cities-Urban%20Planning-18A999.svg?style=flat)](#-project-vision)
-[![Digital Twin](https://img.shields.io/badge/Digital%20Twin-Architecture-2C88D9.svg?style=flat)](#-system-architecture)
+[![AI Powered](https://img.shields.io/badge/AI-Powered-7B61FF.svg?style=flat&logo=openai&logoColor=white)](#-how-the-ai-works--كيف-يعمل-الذكاء-الاصطناعي)
+[![Smart Cities](https://img.shields.io/badge/Smart%20Cities-Urban%20Planning-18A999.svg?style=flat)](#-project-vision--رؤية-المشروع)
+[![Digital Twin](https://img.shields.io/badge/Digital%20Twin-Architecture-2C88D9.svg?style=flat)](#-system-architecture--هيكل-النظام)
 [![Godot](https://img.shields.io/badge/Godot-4.x-478CBF.svg?style=flat&logo=godot-engine&logoColor=white)](examples/godot)
 [![Unity](https://img.shields.io/badge/Unity-Demo-000000.svg?style=flat&logo=unity&logoColor=white)](examples/unity)
 [![Unreal Engine](https://img.shields.io/badge/Unreal%20Engine-5.x-0E1128.svg?style=flat&logo=unrealengine&logoColor=white)](examples/unreal)
-[![Status](https://img.shields.io/badge/Status-Concept%20Architecture-orange.svg?style=flat)](#-project-status)
+[![Status](https://img.shields.io/badge/Status-Concept%20Architecture-orange.svg?style=flat)](#-project-status--حالة-المشروع)
 
-> **From Human Ideas to Intelligent Cities**
+**English + العربية**
 
-AI Future Lab is an AI-powered urban-planning concept that transforms a human idea into a structured city brief, a planning strategy, a digital twin, tested scenarios, and explainable recommendations.
+> **From Human Ideas to Intelligent Cities**  
+> **من الأفكار البشرية إلى المدن الذكية**
 
-It is not a normal chatbot, a traditional city simulator, or a game. It is a proposed intelligent planning environment where a user can describe a city through text or voice and an AI urban planner can understand the request, identify goals and constraints, generate planning strategies, validate decisions, create a digital city model, compare scenarios, and explain why each recommendation was made.
+AI Future Lab is an AI-powered urban-planning concept that transforms a human idea into a structured city brief, an urban strategy, a digital twin, tested scenarios, and explainable recommendations.
+
+AI Future Lab هو تصور لمنصة تخطيط حضري مدعومة بالذكاء الاصطناعي، تحول فكرة المستخدم إلى موجز مدينة منظم، واستراتيجية حضرية، وتوأم رقمي، وسيناريوهات قابلة للاختبار، وتوصيات قابلة للتفسير.
+
+📖 **Full Arabic homepage | الصفحة العربية الكاملة:** [README_AR.md](README_AR.md)
 
 ---
 
-## 🎯 Project Vision
+## 🇦🇪 Why I Created This for the UAE | لماذا أنشأت هذا المشروع للإمارات؟
+
+I created AI Future Lab because I want to contribute ideas that could support the future development of the United Arab Emirates.
+
+As a young Emirati student interested in artificial intelligence, smart cities, sustainability, and future technology, I believe young people should not only wait for the future — they should help imagine and design it.
+
+The project is currently a concept and system architecture, not a completed government or commercial platform. My goal is to share the idea, improve it, learn from professionals, and connect with people or organizations interested in innovative solutions for the UAE and the wider world.
+
+أنشأت AI Future Lab لأنني أريد تقديم أفكار يمكن أن تساهم في التطور المستقبلي لدولة الإمارات العربية المتحدة.
+
+بصفتي طالبًا إماراتيًا شابًا مهتمًا بالذكاء الاصطناعي والمدن الذكية والاستدامة وتقنيات المستقبل، أؤمن بأن الشباب لا ينبغي أن ينتظروا المستقبل فقط، بل يمكنهم المساهمة في تخيله وتصميمه.
+
+المشروع حاليًا مفهوم وهيكل معماري للنظام، وليس منصة حكومية أو تجارية مكتملة. هدفي هو مشاركة الفكرة، وتحسينها، والتعلم من المتخصصين، والتواصل مع الجهات والأشخاص المهتمين بابتكار حلول للإمارات والعالم.
+
+---
+
+## 🎯 Project Vision | رؤية المشروع
 
 A user could describe a future city in natural language:
 
 > “Create a sustainable city for 100,000 residents with strong public transport, walkable neighborhoods, schools, hospitals, green spaces, renewable energy, and efficient water systems.”
 
-AI Future Lab would then:
+يمكن للمستخدم وصف مدينة مستقبلية بلغة طبيعية:
 
-1. Understand the idea.
-2. Detect missing or conflicting information.
-3. Ask focused clarification questions.
-4. Produce a validated city brief.
-5. Generate and compare urban-planning options.
-6. Build a versioned digital twin.
-7. test planning scenarios.
-8. Measure accessibility, mobility, sustainability, capacity, and service coverage.
-9. Explain every important recommendation.
-10. Preserve feedback, evidence, and revisions.
+> «أنشئ مدينة مستدامة تستوعب 100 ألف نسمة، مع نقل عام قوي، وأحياء مناسبة للمشي، ومدارس، ومستشفيات، ومساحات خضراء، وطاقة متجددة، وأنظمة مياه فعالة.»
+
+AI Future Lab would:
+
+1. Understand the idea and its goals — فهم الفكرة وأهدافها.
+2. Detect missing or conflicting information — اكتشاف المعلومات الناقصة أو المتعارضة.
+3. Ask focused clarification questions — طرح أسئلة توضيحية مركزة.
+4. Produce a validated city brief — إنشاء موجز مدينة منظم ومعتمد.
+5. Generate and compare planning options — توليد ومقارنة خطط بديلة.
+6. Build a versioned digital twin — بناء توأم رقمي محفوظ الإصدارات.
+7. Test planning scenarios — اختبار سيناريوهات التخطيط.
+8. Measure accessibility, mobility, sustainability, capacity, and services — قياس الوصول والتنقل والاستدامة والسعة والخدمات.
+9. Explain important recommendations — تفسير التوصيات المهمة.
+10. Preserve feedback, evidence, and revisions — حفظ الملاحظات والأدلة والتعديلات.
 
 ---
 
-## 🧠 How the AI Works
+## 🧠 How the AI Works | كيف يعمل الذكاء الاصطناعي؟
 
 ```mermaid
 flowchart TD
-    A[Human Idea: Voice or Text] --> B[Intent and Constraint Extraction]
-    B --> C{Information Complete?}
-    C -- No --> D[Focused Clarification]
+    A[Human Idea / فكرة المستخدم] --> B[Intent and Constraint Extraction / استخراج الهدف والقيود]
+    B --> C{Information Complete? / هل المعلومات مكتملة؟}
+    C -- No / لا --> D[Focused Clarification / أسئلة توضيحية]
     D --> B
-    C -- Yes --> E[Validated Structured City Brief]
-    E --> F[AI Planning Orchestrator]
-    F --> G[Knowledge Retrieval: GIS, Policies, Standards]
-    G --> H[Candidate Urban Plans]
-    H --> I[Constraint, Safety and Quality Validation]
-    I --> J{Plan Approved?}
-    J -- No --> F
-    J -- Yes --> K[Versioned Digital Twin]
-    K --> L[Visualization and Scenario Simulation]
-    L --> M[Metrics, Evidence and Explainable Results]
-    M --> N[Human Review and Feedback]
-    N --> O[Controlled Learning and Improvement]
-    O --> F
+    C -- Yes / نعم --> E[Validated City Brief / موجز مدينة معتمد]
+    E --> F[AI Planning Orchestrator / منسق التخطيط الذكي]
+    F --> G[GIS, Policies and Knowledge / GIS والسياسات والمعرفة]
+    G --> H[Candidate Urban Plans / خطط حضرية مرشحة]
+    H --> I[Safety and Quality Validation / التحقق من السلامة والجودة]
+    I --> J{Approved? / معتمدة؟}
+    J -- No / لا --> F
+    J -- Yes / نعم --> K[Versioned Digital Twin / توأم رقمي محفوظ]
+    K --> L[Visualization and Simulation / التصور والمحاكاة]
+    L --> M[Metrics and Explainable Results / المؤشرات والنتائج القابلة للتفسير]
+    M --> N[Human Review / مراجعة بشرية]
 ```
 
-### AI responsibilities
+### AI responsibilities | مسؤوليات الذكاء الاصطناعي
 
-- Natural-language understanding
-- Goal, entity, constraint, and preference extraction
-- Conversation and project memory
-- Planning-task orchestration
-- Knowledge retrieval and grounding
-- Candidate-plan generation
-- Multi-objective comparison
-- Structured-output validation
-- Safety and planning-rule checks
-- Decision explanations
-- Feedback analysis
-- Controlled model improvement
+- Natural-language understanding — فهم اللغة الطبيعية.
+- Goal, entity, constraint, and preference extraction — استخراج الأهداف والكيانات والقيود والتفضيلات.
+- Project and conversation memory — ذاكرة المشروع والمحادثة.
+- Planning-task orchestration — تنسيق مهام التخطيط.
+- Knowledge retrieval and grounding — استرجاع المعرفة وربطها بالمصادر.
+- Candidate-plan generation and comparison — إنشاء الخطط البديلة ومقارنتها.
+- Structured-output and planning validation — التحقق من المخرجات وقواعد التخطيط.
+- Safety, fairness, and hallucination checks — فحوص السلامة والإنصاف والهلوسة.
+- Decision explanations — تفسير القرارات.
+- Controlled learning and ModelOps — التعلم الخاضع للرقابة وإدارة النماذج.
 
-### AI model pipeline
+Detailed AI workflows | شرح مسارات الذكاء الاصطناعي:
 
-```text
-User Request
-→ Context Builder
-→ Prompt and Task Builder
-→ Model Router
-→ AI Model
-→ Tool Calling
-→ Structured JSON Output
-→ Schema Validation
-→ Planning Validation
-→ Approved Response or Safe Retry
-```
-
-### Knowledge retrieval pipeline
-
-```text
-Planning Question
-→ Retrieval Query
-→ GIS and Site Data
-→ Planning Policies and Standards
-→ City Knowledge Base
-→ Relevant Evidence Ranking
-→ Grounded AI Context
-→ Planning Recommendation with Sources
-```
-
-### AI evaluation and guardrails
-
-```text
-AI Output
-→ Accuracy Evaluation
-→ Hallucination Check
-→ Constraint Validation
-→ Safety Review
-→ Fairness Review
-→ Cost and Latency Monitoring
-→ Human Approval
-→ Release or Rejection
-```
-
-Full explanation: [AI Model Workflows](docs/AI_MODEL_WORKFLOWS.md)
+- [English](docs/AI_MODEL_WORKFLOWS.md)
+- [العربية](docs/ar/AI_MODEL_WORKFLOWS.md)
 
 ---
 
-## ✨ Key Capabilities
+## ✨ Key Capabilities | القدرات الرئيسية
 
-### Human interaction
-
-- Voice and text project input
-- Multilingual communication
-- Focused clarification questions
-- Conversation history
-- User feedback and approvals
-
-### Urban planning
-
-- Land-use and zoning strategy
-- District and neighborhood generation
-- Density and housing distribution
-- Road hierarchy and public transport
-- Walking and cycling networks
-- Schools, healthcare, and public services
-- Energy, water, waste, and infrastructure
-- Sustainability and climate resilience
-
-### Digital twin and simulation
-
-- Versioned city-object model
-- Spatial relationships
-- Scenario history
-- Planning metrics
-- Population-growth scenarios
-- Traffic and mobility analysis
-- Utility-capacity analysis
-- Service-accessibility analysis
-- Environmental and resilience scenarios
-
-### Explainable results
-
-- Decision summaries
-- Assumptions and uncertainty
-- Alternatives and trade-offs
-- Evidence and validation results
-- Executive and technical reports
-- Human-readable recommendations
+| English | العربية |
+|---|---|
+| Voice and text city input | إدخال فكرة المدينة بالصوت أو النص |
+| Structured city brief | موجز مدينة منظم |
+| Land-use and zoning strategy | استراتيجية استخدامات الأراضي والتقسيم |
+| District, housing, and density planning | تخطيط الأحياء والمساكن والكثافة |
+| Roads, transit, walking, and cycling | الطرق والنقل العام والمشاة والدراجات |
+| Schools, healthcare, and public services | المدارس والرعاية الصحية والخدمات العامة |
+| Energy, water, waste, and infrastructure | الطاقة والمياه والنفايات والبنية التحتية |
+| Digital twin and version history | التوأم الرقمي وسجل الإصدارات |
+| Scenario simulation and comparison | محاكاة السيناريوهات ومقارنتها |
+| Explainable reports and recommendations | تقارير وتوصيات قابلة للتفسير |
+| Security, recovery, and human governance | الأمن والاستعادة والحوكمة البشرية |
 
 ---
 
-## 🏗️ System Architecture
+## 🏗️ System Architecture | هيكل النظام
 
 ```mermaid
 flowchart LR
-    UI[Human Interaction Layer] --> AI[AI Understanding and Orchestration]
-    AI --> PLAN[Urban Planning Intelligence]
-    PLAN --> TWIN[Digital Twin and Geospatial Data]
-    TWIN --> SIM[Visualization and Simulation]
-    SIM --> RESULT[Results and Explainability]
+    UI[Human Interaction / تفاعل المستخدم] --> AI[AI Understanding / فهم الذكاء الاصطناعي]
+    AI --> PLAN[Urban Planning / التخطيط الحضري]
+    PLAN --> TWIN[Digital Twin / التوأم الرقمي]
+    TWIN --> SIM[Simulation / المحاكاة]
+    SIM --> RESULT[Explainable Results / النتائج القابلة للتفسير]
     RESULT --> UI
 
-    SEC[Security, APIs and Monitoring] --- UI
+    SEC[Security and Monitoring / الأمن والمراقبة] --- UI
     SEC --- AI
     SEC --- PLAN
     SEC --- TWIN
     SEC --- SIM
     SEC --- RESULT
-
-    REC[Errors, Recovery and Rollback] --- AI
-    LEARN[Controlled Learning and ModelOps] --- RESULT
 ```
 
-The architecture is modular so each specialist layer can be tested, improved, replaced, or scaled independently.
+The architecture is modular, traceable, explainable, and designed around human approval.
 
-Detailed documentation: [System Architecture](docs/04-system-architecture.md)
+الهيكل مقسم إلى وحدات مستقلة، وقابل للتتبع والتفسير، ويعتمد على المراجعة والموافقة البشرية.
 
 ---
 
-## 🗺️ Visual Workflow Library
+## 🗺️ Workflow Library | مكتبة مخططات العمل
 
-The complete project architecture is organized into eleven connected Whimsical boards, plus an additional AI model-workflow specification.
-
-| # | Workflow | Purpose |
+| # | Workflow / مخطط العمل | Purpose / الغرض |
 |---|---|---|
-| 1 | [Master Overview](https://whimsical.com/6EdTLepAE6eS55uTTtqcny) | Complete system lifecycle |
-| 2 | [Human Input & AI Understanding](https://whimsical.com/8F6utnKkwo8pFn6xxGbTgx) | Intent, constraints, clarification, and city brief |
-| 3 | [AI Core Architecture](https://whimsical.com/V9YjzMedP4ibnudKTGNvbo) | Reasoning, memory, orchestration, and validation |
-| 4 | [Urban Planning & Digital Twin](https://whimsical.com/Bp31XsuU3761Eo6aJJJz6Z) | City systems and versioned digital state |
-| 5 | [City Generation & Simulation](https://whimsical.com/48bkuxGhVnjNmJqQV4tcye) | Visualization and scenario execution |
-| 6 | [Results & Explainability](https://whimsical.com/5ZnfDhpTdQKJFdnQB3xgiH) | Evidence, reports, recommendations, and feedback |
-| 7 | [Errors & Recovery](https://whimsical.com/L4WgEGjtVvKZ2kSSLAcfVy) | Failure detection, repair, retry, and rollback |
-| 8 | [Security, APIs & Monitoring](https://whimsical.com/3bt9QRsL4FvkR8RL1BvRhV) | Identity, privacy, safe APIs, and observability |
-| 9 | [Learning & Autonomous Optimization](https://whimsical.com/SJJ5wWcQCLCSXS4ccNgC1a) | Controlled feedback-driven improvement |
-| 10 | [Deployment & Production Operations](https://whimsical.com/3U7GqN6YdcpV3PRddLezDg) | Testing, staging, release, monitoring, and scaling |
-| 11 | [Final Integrated Architecture](https://whimsical.com/Us2JN5AFmp69T3iVanPp4z) | Complete connected architecture |
-| 12–14 | [AI Model Workflows](docs/AI_MODEL_WORKFLOWS.md) | Prompt orchestration, RAG, evaluation, guardrails, and ModelOps |
-
-Workflow colors:
-
-- 🔵 Blue — AI and system processes
-- 🟢 Mint — execution
-- 🟠 Orange — decisions
-- 🟡 Yellow — review and retry
-- 🔴 Red — errors and recovery
-- 🟣 Purple — AI engine, runtime, or user experience
-- ⚪ Gray — approved states and milestones
+| 1 | [Master Overview / النظرة العامة](https://whimsical.com/6EdTLepAE6eS55uTTtqcny) | Complete lifecycle / دورة النظام كاملة |
+| 2 | [Human Input & AI Understanding / إدخال المستخدم وفهم الذكاء](https://whimsical.com/8F6utnKkwo8pFn6xxGbTgx) | Intent, constraints, clarification / الهدف والقيود والتوضيح |
+| 3 | [AI Core Architecture / بنية الذكاء الاصطناعي](https://whimsical.com/V9YjzMedP4ibnudKTGNvbo) | Memory, orchestration, validation / الذاكرة والتنسيق والتحقق |
+| 4 | [Urban Planning & Digital Twin / التخطيط والتوأم الرقمي](https://whimsical.com/Bp31XsuU3761Eo6aJJJz6Z) | City systems and versions / أنظمة المدينة والإصدارات |
+| 5 | [City Generation & Simulation / إنشاء المدينة والمحاكاة](https://whimsical.com/48bkuxGhVnjNmJqQV4tcye) | Visualization and scenarios / التصور والسيناريوهات |
+| 6 | [Results & Explainability / النتائج والتفسير](https://whimsical.com/5ZnfDhpTdQKJFdnQB3xgiH) | Evidence and recommendations / الأدلة والتوصيات |
+| 7 | [Errors & Recovery / الأخطاء والاستعادة](https://whimsical.com/L4WgEGjtVvKZ2kSSLAcfVy) | Retry, repair, rollback / إعادة المحاولة والإصلاح والرجوع |
+| 8 | [Security, APIs & Monitoring / الأمن وAPI والمراقبة](https://whimsical.com/3bt9QRsL4FvkR8RL1BvRhV) | Privacy and observability / الخصوصية والمراقبة |
+| 9 | [Learning & Optimization / التعلم والتحسين](https://whimsical.com/SJJ5wWcQCLCSXS4ccNgC1a) | Controlled improvement / التحسين الخاضع للرقابة |
+| 10 | [Deployment & Operations / النشر والعمليات](https://whimsical.com/3U7GqN6YdcpV3PRddLezDg) | Testing, release, scaling / الاختبار والنشر والتوسع |
+| 11 | [Final Integrated Architecture / الهيكل النهائي](https://whimsical.com/Us2JN5AFmp69T3iVanPp4z) | Complete connected system / النظام المتكامل الكامل |
+| 12–14 | [AI Model Workflows / مسارات نماذج الذكاء](docs/AI_MODEL_WORKFLOWS.md) | Prompt orchestration, RAG, guardrails, ModelOps / التعليمات وRAG والحماية وإدارة النماذج |
 
 ---
 
-## 🎮 Engine Demonstrations
+## 🎮 Engine Demonstrations | أمثلة محركات العرض
 
-This repository includes small procedural city-generator examples for three engines. They demonstrate how approved city data could eventually be visualized. They are not the complete AI platform.
+The repository contains small educational city-generation examples. They demonstrate possible visualization connectors and are not the complete AI platform.
 
-### Godot 4
+يتضمن المستودع أمثلة تعليمية صغيرة لإنشاء المدينة. وهي توضح طريقة عرض البيانات مستقبلًا وليست المنصة الكاملة.
 
-Creates a ground plane, road grid, procedural buildings, camera, and lighting.
-
-Open:
-
-```text
-examples/godot/project.godot
-```
-
-### Unity
-
-Creates a ground plane, road grid, procedural buildings, camera, and directional light.
-
-Use:
-
-```text
-examples/unity/Assets/Scripts/CityGenerator.cs
-```
-
-### Unreal Engine 5
-
-Provides an editor-adjustable C++ `ACityGenerator` actor that creates ground, roads, and procedural building blocks.
-
-Open:
-
-```text
-examples/unreal/AIFutureLab/AIFutureLab.uproject
-```
-
-See [Demonstration Status](TEST_STATUS.md) before using the examples.
+- **Godot 4:** [English](examples/godot/README.md) | [العربية](examples/godot/README_AR.md)
+- **Unity:** [English](examples/unity/README.md) | [العربية](examples/unity/README_AR.md)
+- **Unreal Engine 5:** [English](examples/unreal/README.md) | [العربية](examples/unreal/README_AR.md)
 
 ---
 
-## 📁 Repository Structure
+## 📚 Documentation | الوثائق
 
-```text
-AI-Future-Lab/
-├── README.md
-├── PROJECT_PITCH.md
-├── TEST_STATUS.md
-├── SECURITY.md
-├── CONTRIBUTING.md
-├── LICENSE.md
-├── docs/
-│   ├── 01-project-vision.md
-│   ├── 02-problem-and-solution.md
-│   ├── 03-how-it-works.md
-│   ├── 04-system-architecture.md
-│   ├── 05-workflow-library.md
-│   ├── 06-feature-set.md
-│   ├── 07-roadmap.md
-│   ├── 08-safety-and-governance.md
-│   ├── 09-future-scope.md
-│   ├── AI_MODEL_WORKFLOWS.md
-│   └── WORKFLOW_ARCHITECTURE.md
-└── examples/
-    ├── godot/
-    ├── unity/
-    └── unreal/
-```
+### English
+
+- [Project Vision](docs/01-project-vision.md)
+- [Problem and Solution](docs/02-problem-and-solution.md)
+- [How It Works](docs/03-how-it-works.md)
+- [System Architecture](docs/04-system-architecture.md)
+- [Workflow Library](docs/05-workflow-library.md)
+- [Feature Set](docs/06-feature-set.md)
+- [Roadmap](docs/07-roadmap.md)
+- [Safety and Governance](docs/08-safety-and-governance.md)
+- [Future Scope](docs/09-future-scope.md)
+
+### العربية
+
+- [الوثائق العربية الكاملة](docs/ar/COMPLETE_DOCUMENTATION.md)
+- [مسارات عمل الذكاء الاصطناعي](docs/ar/AI_MODEL_WORKFLOWS.md)
+- [مكتبة مخططات العمل](docs/ar/WORKFLOW_LIBRARY.md)
+- [العرض التعريفي العربي](PROJECT_PITCH_AR.md)
 
 ---
 
-## 🚀 Future Technology Direction
+## 🧪 Project Status | حالة المشروع
 
-The main platform is planned as a lightweight web application rather than depending on a game engine.
+**Current stage / المرحلة الحالية:** Concept architecture, public documentation, visual workflows, and educational demonstrations.  
+**مفهوم، وهيكل معماري، ووثائق عامة، ومخططات بصرية، وأمثلة تعليمية.**
 
-Possible future stack:
+### Completed | تم إنجازه
 
-- **Frontend:** Next.js and TypeScript
-- **Interactive maps:** MapLibre GL JS
-- **Database and authentication:** PostgreSQL and Supabase
-- **Geospatial data:** GeoJSON and spatial database extensions
-- **AI orchestration:** Server-side model and tool routing
-- **Simulation:** Browser workers and backend calculation services
-- **Reporting:** Dashboards and exportable documents
-- **Engine visualization:** Optional Godot, Unity, or Unreal connectors
+- Product vision and architecture — رؤية المشروع وهيكل النظام.
+- Eleven visual workflow boards — أحد عشر مخطط عمل بصريًا.
+- AI model workflow specification — تصميم مسارات نماذج الذكاء الاصطناعي.
+- Safety, security, recovery, and roadmap — السلامة والأمن والاستعادة وخارطة الطريق.
+- Starter Godot, Unity, and Unreal examples — أمثلة أولية للمحركات الثلاثة.
 
----
+### Not completed yet | لم يتم إنجازه بعد
 
-## 🧪 Project Status
-
-**Current stage:** concept architecture, public documentation, visual workflows, and educational engine demonstrations.
-
-Completed:
-
-- Product vision
-- End-to-end architecture
-- Eleven visual workflow boards
-- AI orchestration specification
-- Safety and recovery design
-- Roadmap and public project documentation
-- Starter visualization examples
-
-Not yet completed:
-
-- Production AI planner
-- Trained or connected planning model
-- Live GIS database
-- Professional transport or utility simulation
-- Deployed web platform
-- Verified engine builds across all versions
-
-The repository intentionally separates completed architecture from future implementation.
+- Production AI planner — مخطط ذكاء اصطناعي إنتاجي.
+- Live GIS and professional city datasets — بيانات GIS مباشرة واحترافية.
+- Professional traffic and utility simulation — محاكاة احترافية للنقل والمرافق.
+- Deployed full web platform — منصة ويب كاملة ومنشورة.
 
 ---
 
-## 🛡️ Responsible AI
+## 🤝 Contact, Collaboration & Permission | التواصل والتعاون وطلب الإذن
 
-AI Future Lab is designed as a decision-support system, not a replacement for licensed planners, engineers, architects, or public authorities.
+The repository is public for portfolio, educational viewing, and project presentation. It does not grant permission to copy, redistribute, commercially use, or present the project as another person's original work.
 
-Every major recommendation should include:
+المستودع متاح للعامة لأغراض العرض والتعلم، لكنه لا يمنح إذنًا لنسخ المشروع أو إعادة نشره أو استخدامه تجاريًا أو نسبه لشخص آخر.
 
-- The recommendation
-- The reason for it
-- The data and assumptions used
-- Alternatives considered
-- Trade-offs
-- Uncertainty
-- Required human approval
+For collaboration or permission requests, open a GitHub Issue using one of the bilingual forms:
 
-Read: [Safety and Governance](docs/08-safety-and-governance.md)
+للتعاون أو طلب الإذن، افتح طلبًا من صفحة **Issues** باستخدام أحد النماذج الثنائية اللغة:
 
----
+- **Permission Request | طلب إذن**
+- **Collaboration Proposal | اقتراح تعاون**
 
-## 🤝 Contributing
-
-Constructive educational feedback is welcome in:
-
-- Artificial intelligence
-- Urban planning
-- Smart cities
-- Digital twins
-- Geospatial systems
-- Sustainability
-- Explainable AI
-- System architecture
-- Godot, Unity, and Unreal development
-
-See [CONTRIBUTING.md](CONTRIBUTING.md).
+Read / اقرأ: [PERMISSION.md](PERMISSION.md)
 
 ---
 
-## 👤 Author
+## 👤 Creator | صاحب الفكرة
 
-Created by a young student innovator exploring artificial intelligence, smart cities, system architecture, and future technology.
+> **Young Emirati Innovator, Concept Creator, and System Architecture Designer of AI Future Lab.**  
+> **مبتكر إماراتي شاب، وصاحب مفهوم AI Future Lab، ومصمم هيكل النظام.**
 
-Personal school details, home address, phone number, private email, exact age, and daily location are intentionally excluded for privacy and safety.
+Personal school details, exact age, home address, phone number, private email, and daily location are intentionally excluded for privacy and safety.
+
+لا يتم نشر العمر الدقيق أو المدرسة أو العنوان أو رقم الهاتف أو البريد الشخصي أو الموقع اليومي حفاظًا على الخصوصية والسلامة.
 
 ---
 
-## 📄 Copyright
+## 📄 Copyright | الحقوق
 
-All rights reserved. See [LICENSE.md](LICENSE.md).
+All rights reserved. جميع الحقوق محفوظة. See / راجع: [LICENSE.md](LICENSE.md).
