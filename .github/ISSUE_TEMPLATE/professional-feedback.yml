@@ -1,0 +1,120 @@
+name: Professional Feedback | ملاحظة مهنية
+description: Submit structured feedback about urban planning, AI, GIS, digital twins, safety, security, documentation, or the roadmap. | تقديم ملاحظة منظمة عن التخطيط أو الذكاء الاصطناعي أو GIS أو الأمان أو التوثيق.
+title: "[Professional Feedback] "
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thank you for helping improve AI Future Lab. Please separate verified facts, professional judgment, assumptions, and personal opinion.
+
+        شكرًا لمساعدتك في تحسين AI Future Lab. يرجى التفريق بين الحقائق المؤكدة والخبرة المهنية والافتراض والرأي الشخصي.
+
+        Do not include confidential project data or private personal information.
+
+        لا تضع بيانات مشاريع سرية أو معلومات شخصية خاصة.
+
+  - type: input
+    id: name
+    attributes:
+      label: Name or professional identity | الاسم أو الهوية المهنية
+      placeholder: Name, role, or organization
+    validations:
+      required: true
+
+  - type: input
+    id: expertise
+    attributes:
+      label: Area of expertise | مجال الخبرة
+      placeholder: Urban planning, transport, GIS, AI, cybersecurity, Arabic language, etc.
+    validations:
+      required: true
+
+  - type: input
+    id: profile
+    attributes:
+      label: Optional public professional profile | ملف مهني عام اختياري
+      placeholder: GitHub, university page, organization website, or professional profile
+
+  - type: dropdown
+    id: area
+    attributes:
+      label: Feedback area | مجال الملاحظة
+      options:
+        - Project vision | رؤية المشروع
+        - Problem and proposed solution | المشكلة والحل
+        - Urban planning | التخطيط الحضري
+        - Artificial intelligence | الذكاء الاصطناعي
+        - GIS and geospatial data | GIS والبيانات الجغرافية
+        - Digital twin | التوأم الرقمي
+        - Simulation and metrics | المحاكاة والمؤشرات
+        - Responsible AI and governance | AI المسؤول والحوكمة
+        - Security and privacy | الأمان والخصوصية
+        - Roadmap and product scope | خارطة الطريق ونطاق المنتج
+        - Arabic or English documentation | التوثيق العربي أو الإنجليزي
+        - Accessibility and inclusion | الإتاحة والشمول
+        - Other | غير ذلك
+    validations:
+      required: true
+
+  - type: input
+    id: location
+    attributes:
+      label: Related file, section, or workflow | الملف أو القسم أو الـWorkflow المرتبط
+      placeholder: docs/04-system-architecture.md, Workflow 5, README section, etc.
+    validations:
+      required: true
+
+  - type: textarea
+    id: observation
+    attributes:
+      label: Observation or problem | الملاحظة أو المشكلة
+      description: Describe the issue precisely. | اشرح المشكلة بدقة.
+    validations:
+      required: true
+
+  - type: textarea
+    id: importance
+    attributes:
+      label: Why it matters | لماذا هي مهمة؟
+      description: Explain the effect on accuracy, safety, clarity, feasibility, or usefulness. | اشرح أثرها على الدقة أو السلامة أو الوضوح أو قابلية التنفيذ.
+    validations:
+      required: true
+
+  - type: textarea
+    id: recommendation
+    attributes:
+      label: Recommended improvement | التحسين المقترح
+      description: Provide a practical proposed change when possible. | قدم تغييرًا عمليًا مقترحًا عند الإمكان.
+    validations:
+      required: true
+
+  - type: textarea
+    id: evidence
+    attributes:
+      label: Evidence, standard, source, or professional reasoning | الدليل أو المعيار أو المصدر أو التفسير المهني
+      description: State clearly when this is experience or opinion rather than a verified source. | وضح عندما يكون الكلام خبرة أو رأيًا وليس مصدرًا مؤكدًا.
+
+  - type: dropdown
+    id: severity
+    attributes:
+      label: Suggested priority | الأولوية المقترحة
+      options:
+        - Critical safety or privacy concern | أمان أو خصوصية حرجة
+        - High — affects core concept or accuracy | عالية — تؤثر على الفكرة أو الدقة
+        - Medium — important improvement | متوسطة — تحسين مهم
+        - Low — wording or presentation | منخفضة — صياغة أو عرض
+        - Future idea | فكرة مستقبلية
+    validations:
+      required: true
+
+  - type: checkboxes
+    id: confirmation
+    attributes:
+      label: Confirmation | التأكيد
+      options:
+        - label: I understand that AI Future Lab is currently a concept and architecture project, not a completed professional planning platform. | أفهم أن المشروع حاليًا فكرة وهندسة نظام وليس منصة تخطيط احترافية مكتملة.
+          required: true
+        - label: I have separated verified information from assumptions and opinion. | فصلت المعلومات المؤكدة عن الافتراض والرأي.
+          required: true
+        - label: I have not included confidential or private information. | لم أضع معلومات سرية أو خاصة.
+          required: true
